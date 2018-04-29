@@ -137,6 +137,13 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
   // element vector and there are 10 timesteps. The number of variables is:
   //
   // 4 * 10 + 2 * 9
+
+  double x = state[0];
+  double y = state[1];
+  double psi = state[2];
+  double v = state[3];
+  double cte = state[4];
+  double epsi = state[5];
   size_t n_vars = N * 6 + (N - 1) * 2;
   // TODO: Set the number of constraints
   size_t n_constraints = N * 6;
