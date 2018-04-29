@@ -6,6 +6,17 @@
 using CppAD::AD;
 
 // TODO: Set the timestep length and duration
+
+
+ /*
+The prediction horizon is the duration over which future predictions are made. We’ll refer to this as T.
+
+T is the product of two other variables, N and dt.
+
+N is the number of timesteps in the horizon. dt is how much time elapses between actuations. For example, if N were 20 and dt were 0.5, then T would be 10 seconds.
+T should be as large as possible, while dt should be as small as possible.
+*/
+
 size_t N = 12;
 double dt = 0.15;
 
@@ -263,6 +274,6 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
     result.push_back(solution.x[x_start + i + 1]);
     result.push_back(solution.x[y_start + i + 1]);
   }
-  std::cout << "Cost " << cost << std::endl;
+
   return result;
 }
