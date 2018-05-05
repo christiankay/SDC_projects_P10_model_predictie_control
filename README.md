@@ -35,7 +35,7 @@ The approach to dealing with latency was twofold (not counting simply limiting t
 
 ## Results
 
-The video shows the car driving around the lake automously based on the MPC approach.
+The video shows the car driving around the lake track automously based on the MPC approach.
 
 [![Alt text](https://img.youtube.com/vi/aO9M5lk1CLc/0.jpg)](https://www.youtube.com/watch?v=aO9M5lk1CLc)
 
